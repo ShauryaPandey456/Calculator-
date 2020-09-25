@@ -1,0 +1,68 @@
+using System;
+using System.ComponentModel;
+using System.Runtime.ExceptionServices;
+using System.Security.Cryptography.X509Certificates;
+
+namespace Calculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //we first make to integers called number 1 and number 2
+            int num1 = 0; int num2 = 0;
+            //we then tell user what the programm is 
+
+            Console.WriteLine("Hello and welcome to your online calculator press ENTER to continue.");
+
+            //user can put input here but nothing goes here
+
+            Console.ReadLine();
+
+            //we tell user to enter in first digit
+
+            Console.WriteLine("Please enter in you first digit then press ENTER.");
+
+//we know they enter in a number so we will make this input equal to integer num1
+
+            num1 = Convert.ToInt32(Console.ReadLine());
+            
+            //we tell user to enter in second digit
+            Console.WriteLine("Please enter in your second digit then press ENTER.");
+
+            // we know user will enter seonc digit so we make num2 equal to this input
+
+            num2= Convert.ToInt32(Console.ReadLine());
+            //we tell user to enter  in a s m d for which operation
+            Console.WriteLine("Please select your operation from the list:");
+            Console.WriteLine("a - Addition");
+            Console.WriteLine("s- Subtraction");
+            Console.WriteLine("m- Multiplication");
+            Console.WriteLine("d- Division");
+            
+            //we then change flow of the programm and make user input which operation
+            switch (Console.ReadLine())
+                //we then make cases like scenariors for what will happen when one of these operations are selected
+            {
+                   case "a":
+                    Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
+                    break;
+                case "s":  
+                    Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+                    break;
+                case "m":
+                    Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
+                    break;
+                case "d":
+                    Console.WriteLine($"Your result : {num1} / {num2} = " + (num1 / num2));
+                    break;
+
+            }
+            // the end
+            Console.Write("Press any key to close the Calculator console app...");
+            Console.ReadKey();
+          
+        }
+    }
+}
+
